@@ -145,11 +145,11 @@ class _MyHomePageState extends State<MyHomePage>
     int height = bottom - top;
 
     // Recorta la imagen
-    img.Image croppedImage = img.copyCrop(image, left, top, width, height);
+    // img.Image croppedImage = img.copyCrop(image, left, top, width, height);
 
     // Guarda la imagen recortada en un archivo temporal
     File croppedFile = File(originalImage.path.replaceFirst('.png', '_cropped.png'));
-    await croppedFile.writeAsBytes(img.encodePng(croppedImage)!);
+    // await croppedFile.writeAsBytes(img.encodePng(croppedImage)!);
 
     return croppedFile;
   }
